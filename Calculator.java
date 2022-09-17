@@ -18,10 +18,10 @@ public class Calculator {
         if (isRoman(split[0]) && isRoman(split[1])) {
             first = Integer.parseInt(ARABIC.get(ROMAN.indexOf(split[0])));
             second = Integer.parseInt(ARABIC.get(ROMAN.indexOf(split[1])));
-            if (first <= second && sign == '-')
+           if (first <= second && sign == '-' || first / second < 1)
                 throw new Exception("Неверное выражение");
-            return ROMAN.get(ARABIC.indexOf(String.valueOf(Calk.calculate(first, second, sign))));
-
+            return Convert.toRoman(Calk.calculate(first, second, sign));
+            
         } else if (isArabic(split[0]) && isArabic(split[1])) {
             first = Integer.parseInt(split[0]);
             second = Integer.parseInt(split[1]);
