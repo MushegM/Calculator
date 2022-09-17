@@ -41,18 +41,13 @@ public class Calculator {
 
     static class Calk {
         static int calculate(int number1, int number2, char operation) {
-            switch (operation) {
-                case '+':
-                    return number1 + number2;
-                case '-':
-                    return number1 - number2;
-                case '*':
-                    return number1 * number2;
-                case '/':
-                    return number1 / number2;
-                default:
-                    throw new IllegalArgumentException("Не верный знак операции");
-            }
+            return switch (operation) {
+                case '+' -> number1 + number2;
+                case '-' -> number1 - number2;
+                case '*' -> number1 * number2;
+                case '/' -> number1 / number2;
+                default -> throw new IllegalArgumentException("Не верный знак операции");
+            };
         }
     }
 }
