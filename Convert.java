@@ -3,7 +3,7 @@ package calculator;
 import java.util.TreeMap;
 
 public class Convert {
-    private final static TreeMap<Integer, String> map = new TreeMap<Integer, String>();
+    private final static TreeMap<Integer, String> map = new TreeMap<>();
 
     static {
         map.put(100, "C");
