@@ -18,7 +18,7 @@ public class Calculator {
         if (isRoman(split[0]) && isRoman(split[1])) {
             first = Integer.parseInt(ARABIC.get(ROMAN.indexOf(split[0])));
             second = Integer.parseInt(ARABIC.get(ROMAN.indexOf(split[1])));
-           if (first <= second && sign == '-' || first / second < 1)
+           if (first <= second && sign == '-' || first / second < 1 && sign =='/')
                 throw new Exception("Неверное выражение");
             return Convert.toRoman(Calk.calculate(first, second, sign));
             
